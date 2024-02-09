@@ -13,4 +13,11 @@ router.post("/add",async(req,res)=>{
     res.send("success")
 })
 
+router.get("/view",async(req,res)=>{
+    let result=await creationModel.find()
+    .populate("userId","name email qualification skills experience certification pass -_id")
+    .exec()
+    res.json(result)
+})
+
 module.exports=router
