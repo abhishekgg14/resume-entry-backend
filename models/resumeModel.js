@@ -11,7 +11,10 @@ const resumeSchema=new mongoose.Schema(
             required:true
         },
         pass:{
-            ty
+            type:String,
+            required:true
         }
     }
 )
+
+module.exports=mongoose.model("user",resumeSchema)

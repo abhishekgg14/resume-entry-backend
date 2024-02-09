@@ -14,5 +14,5 @@ mongoose.connect("mongodb+srv://abhishekgg14:Gireesh5655@cluster0.aeekxv7.mongod
 app.use("/api",resumeRoute)
 
 app.listen(3002,()=>{
-    console.log(Running)
+    console.log("Running")
 })
