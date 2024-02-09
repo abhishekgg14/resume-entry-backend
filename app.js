@@ -2,6 +2,7 @@ const express=require("express")
 const cors=require("cors")
 const mongoose=require("mongoose")
 const resumeRoute=require("./controler/resumeRouter")
+const creationRoute=require("./controler/creationRouter")
 
 const app=express()
 
@@ -12,6 +13,7 @@ mongoose.connect("mongodb+srv://abhishekgg14:Gireesh5655@cluster0.aeekxv7.mongod
 {useNewUrlParser:true})
 
 app.use("/api",resumeRoute)
+app.use("/api/res",creationRoute)
 
 app.listen(3002,()=>{
     console.log("Running")
